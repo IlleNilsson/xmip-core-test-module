@@ -2,12 +2,12 @@
 [workspace]
 
 [package]
-name = "xmip-core-contract-rust"
+name = "xmip-core-test-module"
 version = "0.1.0"
 edition = "2024"
 license = "AGPL-3.0-or-later"
-repository = "https://github.com/IlleNilsson/xmip-core-contract-rust"
-description = "Content contract authored as a loadable Rust module over the Xmip ABI: the entrypoint, the contract table and the lifecycle a Rust author starts from. A xmip-core-contract technology."
+repository = "https://github.com/IlleNilsson/xmip-core-test-module"
+description = "An external module over the Xmip ABI, built by itself and loaded by the runtime's loader in its tests: a content contract with its entrypoint, contract table and lifecycle."
 publish = false
 
 [lib]
