@@ -1,11 +1,11 @@
 [package]
 name = "xmip-core-test-module"
-version = "0.1.0"
-edition = "2024"
-license = "AGPL-3.0-or-later"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
 repository = "https://github.com/IlleNilsson/xmip-core-test-module"
 description = "An external module over the Xmip ABI, built by itself and loaded by the runtime's loader in its tests: a content contract with its entrypoint, contract table and lifecycle."
-publish = false
+publish.workspace = true
 
 [lib]
 path = "src/lib.rs"
@@ -22,16 +22,5 @@ contract = { package = "xmip-core-contract", git = "https://github.com/IlleNilss
 xcore = { package = "xmip-core", git = "https://github.com/IlleNilsson/xmip-core", branch = "main" }
 stream = { package = "xmip-core-stream", git = "https://github.com/IlleNilsson/xmip-core-stream", branch = "main" }
 
-[lints.rust]
-# A provider's crate writes no unsafe: the capability's export stands on the C
-# boundary for it (ADR-0061, decision 8).
-unsafe_code = "forbid"
-
-[lints.clippy]
-too_many_lines = "warn"
-pedantic = { level = "warn", priority = -1 }
-missing_errors_doc = "warn"
-missing_panics_doc = "warn"
-missing_safety_doc = "warn"
-unwrap_used = "warn"
-expect_used = "allow"
+[lints]
+workspace = true
